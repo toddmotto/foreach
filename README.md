@@ -1,16 +1,15 @@
 # foreach.js [![Build Status](https://travis-ci.org/toddmotto/foreach.png)](https://travis-ci.org/toddmotto/foreach)
 
-foreach.js is a few bytes worth of `forEach()` implementation for Arrays, Objects and NodeLists that takes away repetitive object lookups and array notations. Works in all browsers not just modern. Pass in any type and it'll iterate and pass back all the necessary goods such as `index`, `element`, `property`, `value` and `object`. The syntax is a simple function wrapper.
+foreach.js is a few bytes worth of a simple `forEach()` implementation for Arrays, Objects and NodeLists that takes away repetitive object lookups and array notations. Pass in any type and it'll iterate and pass back all the necessary goods such as `index`, `element`, `property`, `value` and `object`. The syntax is a simple function wrapper.
 
 ```js
-// syntax
 forEach(collection[, callback[, context]]);
 
 // example
-var myArray = ['A', 'B', 'C', 'D'];
-forEach(myArray, function (index, value) {
-	// `this` will reference myArray: []
-}, myArray); // note third param changing execution context
+var myArray = ['A', 'B', 'C'];
+forEach(myArray, function (value, index) {
+
+}, myArray); // note third param
 ```
 
 #### forEach() for Arrays/NodeLists
@@ -18,14 +17,14 @@ You can loop over an Array or NodeList using a standard `for` loop, however, Nod
 
 ```js
 // Array:
-forEach(['A', 'B', 'C', 'D'], function (index, value) {
-	console.log(index); // 0, 1, 2, 3
+forEach(['A', 'B', 'C', 'D'], function (value, index) {
 	console.log(value); // A, B, C, D
+  console.log(index); // 0, 1, 2, 3
 });
 // NodeList:
-forEach(document.querySelectorAll('div'), function (index, value) {
-	console.log(index); // 0, 1, 2, 3
-	console.log(value); // <div>, <div>, <div>...
+forEach(document.querySelectorAll('div'), function (value, index) {
+  console.log(value); // <div>, <div>, <div>...
+	console.log(index); // 0, 1, 2...
 });
 ```
 

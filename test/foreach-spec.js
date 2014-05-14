@@ -20,13 +20,13 @@ describe('forEach', function () {
     });
 
     it('should pass the index', function () {
-      forEach(myArray, function (index, value) {
+      forEach(myArray, function (value, index) {
         expect(index).toMatch(/[0-9]/);
       });
     });
 
     it('should pass the element', function () {
-      forEach(myArray, function (index, value) {
+      forEach(myArray, function (value, index) {
         expect(value).toMatch(/[A-D]/);
       });
     });
@@ -99,7 +99,7 @@ describe('forEach', function () {
     });
 
     it('should change the context to the iterated Array', function () {
-      forEach(myArray, function (value, prop, obj) {
+      forEach(myArray, function (value, index) {
         expect(this[0]).toEqual('A');
       }, myArray);
     });
