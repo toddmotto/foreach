@@ -6,7 +6,7 @@ var forEach = function (collection, callback, scope) {
       }
     }
   } else {
-    for (var i = 0; i < collection.length; i++) {
+    for (var i = 0, len = collection.length; i < len; i++) {
       callback.call(scope, collection[i], i, collection);
     }
   }
