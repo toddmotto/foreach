@@ -1,4 +1,4 @@
-# foreach.js [![Build Status](https://travis-ci.org/toddmotto/foreach.png)](https://travis-ci.org/toddmotto/foreach)
+# foreach.js [![Build Status](https://travis-ci.org/toddmotto/foreach.svg)](https://travis-ci.org/toddmotto/foreach)
 
 foreach.js is a few bytes worth of a simple `forEach()` implementation for Arrays, Objects and NodeLists that takes away repetitive object lookups and array notations. Pass in any type and it'll iterate and pass back all the necessary goods such as `index`, `element`, `property`, `value` and `object`. The syntax is a simple function wrapper.
 
@@ -76,7 +76,7 @@ Ensure you're using the files from the `dist` directory (contains compiled produ
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Gulp.
 
 ## Release history
 

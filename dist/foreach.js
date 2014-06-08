@@ -1,4 +1,4 @@
-/*! foreach v1.1.0 | (c) 2014 @toddmotto | github.com/toddmotto/foreach */
+/*! foreach.js v1.1.0 | (c) 2014 @toddmotto | https://github.com/toddmotto/foreach */
 var forEach = function (collection, callback, scope) {
   if (Object.prototype.toString.call(collection) === '[object Object]') {
     for (var prop in collection) {
